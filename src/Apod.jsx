@@ -21,7 +21,7 @@ class Apod extends Component{
             this.setState({
                 title: res.title,
                 text: res.explanation,
-                imgSrc: res.hdurl
+                imgSrc: res.url,
             })
         }).catch(err => {
             console.log(err);
@@ -32,11 +32,9 @@ class Apod extends Component{
         return(
             <div>
                 <h1>Astronomical Picture of the Day!</h1>
-                <h2>{this.state.title}</h2>
-                <p>{this.state.text}</p>
-                <img src={this.state.imgSrc} alt='astro....' 
-                    className='img-apod'
-                />
+                <h2>{ this.state.title }</h2>
+                <p>{ this.state.text }</p>
+                <iframe src={ this.state.imgSrc } className='img-apod'/>
             </div>
         );
     };
