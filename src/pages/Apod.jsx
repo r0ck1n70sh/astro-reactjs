@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {Component} from 'react';
 
-import './App.css';
 
 const api_key = '34Bsh7bCaw4tx9g0ZztPocRXHrq91svkPLfOiyBR';
 const url = `https://api.nasa.gov/planetary/apod?api_key=${api_key}`;
@@ -34,7 +33,7 @@ class Apod extends Component{
                 <h1>Astronomical Picture of the Day!</h1>
                 <h2>{ this.state.title }</h2>
                 <p>{ this.state.text }</p>
-                <iframe src={ this.state.imgSrc } className='img-apod'/>
+                <iframe src={ this.state.imgSrc } className='img-apod' title={ this.state.title }/>
             </div>
         );
     };

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { createRef, useState } from 'react';
-import ImageList from './comps/ImageList';
-import './App.css';
+import ImageList from '../comps/ImageList';
 
 const searchInput = createRef();
 
