@@ -1,0 +1,15 @@
+.card {
+    border: solid black 0.5em;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 2em;
+}
+
+.card:hover {
+    transform: scale(1.25);
+}
+
+.card-img {
+    max-width: 20em;
+    max-height: 20em;
+}

@@ -5,18 +5,23 @@ import './App.css';
 import Apod from './pages/Apod';
 import ImageSearch from './pages/ImageSearch';
 
+var NASA_LOGO = 'https://www.pngfind.com/pngs/m/299-2995596_nasa-logo-photo-nasa-logo-1-1-hd.png';
+
 class App extends Component {
   render() {
     return (
       <Router>
-        <ul>
-          <li>
+        <div className='navbar'>
+          <div>
+            <a href='https://api.nasa.gov/' target='_blank'><img src={NASA_LOGO} className='img-logo'/></a>
+          </div>
+          <div>
             <Link to='/apod'>APOD</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <Link to='/searchImage'>Images</Link>
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <Switch>
           <Route path='/apod'>

@@ -1,19 +1,22 @@
 import './ImageList.css';
+import SearchImage  from './SearchImage';
 
 const ImageList = (props) => {
     const dataList = props.dataList;
     const items = dataList.map((data, idx) =>{
+        let url = data[1];
+        let alt = data[0];
         return (
-            <li key={idx}>
-                <img src={data[1]} alt={data[0]} className='img-item'/>
-            </li>
+            <div key={idx}>
+                <SearchImage url={url} alt={alt} />
+            </div>
         );
     });
 
     return (
-        <ul>
+        <div className='wrapper'>
             {items}
-        </ul>
+        </div>
     );
 }
 

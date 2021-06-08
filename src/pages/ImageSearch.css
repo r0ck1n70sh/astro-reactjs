@@ -1,0 +1,10 @@
+.search-result-div {
+    margin: auto;
+}
+
+.no-content {
+    font-style: 'Monospace';
+    margin: auto;
+    margin-top: 8em;
+    font-size: 4em;
+}
