@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { createRef, useEffect, useState } from 'react';
 
 import ImageList from '../comps/ImageList';
@@ -37,29 +36,6 @@ const ImageSearch = (props) => {
         event.preventDefault();
         setPage(1);
         updateData();
-       
-
-    //    const url = `https://images-api.nasa.gov/search?q=${queryString}&page=${page}&media_type=image`;
-
-    //    axios.get(url)
-    //    .then(res => {
-    //        return res['data']['collection']['items'];
-    //    })
-    //    .then(res => {
-    //        let images = res.map(e => {
-    //            let image = [
-    //                e.data[0].title,
-    //                e.links[0].href,
-    //                e.data[0].date_created
-    //            ];
-            
-    //            return image;
-    //        });
-    //        setData(images);
-    //    })
-    //    .catch(err => {
-    //         console.log(err);
-    //    });
     };
 
 
